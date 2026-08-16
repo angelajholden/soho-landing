@@ -1,0 +1,101 @@
+/*
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+:root {
+	--purple: #694f5b;
+	--pink: #a06793;
+	--blue: #345dbd;
+	--teal: #007b80;
+	--yellow: #dfb643;
+	--white: #fff;
+	--black: #222;
+	--gray: #eaeaea;
+	--lt-gray: #f8f8f8;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 100%;
+	line-height: 1.65;
+	color: var(--black);
+	background-color: var(--white);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+svg {
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	fill: red;
+	stroke: blue;
+}
+
+.wrap {
+	max-width: 75rem;
+	margin: 0 auto;
+}
+
+.access-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+button {
+	border: 0;
+	padding: 0;
+	background-color: transparent;
+}
+
+a {
+	color: var(--blue);
+	text-decoration-color: var(--blue);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 3px;
+	transition: text-decoration-color 300ms ease-in-out;
+}
+
+a:focus,
+a:hover,
+a:active {
+	color: var(--blue);
+	text-decoration-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 600;
+	line-height: 1.25;
+	margin: 0 0 1rem;
+}
