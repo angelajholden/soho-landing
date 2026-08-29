@@ -12,8 +12,10 @@
 	--blue: #345dbd;
 	--teal: #007b80;
 	--yellow: #dfb643;
+	--gold: #95700a;
 	--white: #fff;
 	--black: #222;
+	--dk-gray: #777;
 	--gray: #eaeaea;
 	--lt-gray: #f8f8f8;
 }
@@ -41,6 +43,10 @@ body {
 	background-color: var(--white);
 }
 
+figure {
+	margin: 0;
+}
+
 img {
 	display: block;
 	max-width: 100%;
@@ -55,8 +61,12 @@ svg {
 	stroke: blue;
 }
 
+.section {
+	padding: 3rem 1rem;
+}
+
 .wrap {
-	max-width: 75rem;
+	max-width: 100rem;
 	margin: 0 auto;
 }
 
@@ -74,6 +84,7 @@ button {
 	border: 0;
 	padding: 0;
 	background-color: transparent;
+	cursor: pointer;
 }
 
 a {
@@ -98,4 +109,208 @@ h4 {
 	font-weight: 600;
 	line-height: 1.25;
 	margin: 0 0 1rem;
+}
+
+/* Header */
+.header {
+	padding: 1rem;
+	background-color: var(--black);
+}
+
+.header .wrap {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Nav and Search Icons */
+.header .icon svg {
+	width: 2rem;
+	height: 2rem;
+	stroke: var(--white);
+}
+
+/* Navigation */
+.open_button {
+	visibility: hidden;
+}
+
+.close_button {
+	display: none;
+}
+
+.main_nav {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 3rem;
+}
+
+.main_nav a {
+	text-decoration-color: transparent;
+	text-underline-offset: 5px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: var(--white);
+	transition: text-decoration-color 300ms ease-in-out;
+}
+
+.main_nav a:focus,
+.main_nav a:hover,
+.main_nav a:active {
+	text-decoration-color: var(--white);
+}
+
+/* Search */
+.search_form-overlay {
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	pointer-events: none;
+}
+
+/* Hero Section */
+.hero_section {
+	position: relative;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 5;
+	z-index: 0;
+}
+
+.hero_title-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+
+.hero_title {
+	font-size: 5rem;
+	font-weight: 300;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: var(--white);
+	margin: 0;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 50%);
+}
+
+.hero_section .figure {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.hero_section img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Story Items */
+.secondary_heading {
+	font-size: 2rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+	margin: 0 0 2rem;
+}
+
+.story_wrap {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 0.333rem;
+}
+
+.story .figure {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1;
+}
+
+.story img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.story_category {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	margin-left: 50%;
+	transform: translate(-50%, -0.5rem);
+	background-color: var(--white);
+	line-height: 1;
+	color: var(--gold);
+}
+
+.blog_heading {
+	font-size: 1rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.story time {
+	display: block;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 0.9rem;
+	font-style: italic;
+	text-align: center;
+	color: var(--dk-gray);
+}
+
+/* Main Content */
+.main .wrap {
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+}
+
+.main_content {
+	padding-right: 3rem;
+	margin-right: 3rem;
+	border-right: 1px solid var(--gray);
+}
+
+.main_content .category {
+	margin: 0 0 1rem;
+}
+
+.main_content .category span {
+	display: inline-block;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	padding: 0.5rem 1rem;
+	font-family: "Times New Roman", Times, serif;
+	font-style: italic;
+	line-height: 1;
+	color: var(--gold);
+	text-align: center;
+	background-color: var(--white);
+}
+
+.main_content .category::after {
+	content: "";
+	position: relative;
+	transform: translateY(-1rem);
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+	height: 0;
+	border-bottom: 2px solid var(--gold);
+	z-index: -1;
 }

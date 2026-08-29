@@ -17,11 +17,11 @@
 <body>
 	<header class="header">
 		<div class="wrap">
-			<button type="button" aria-label="Open Menu" aria-expanded="false" aria-controls="mainNav" class="icon_button open_button">
+			<button type="button" aria-label="Open Menu" aria-expanded="false" aria-controls="mainNav" class="icon menu_button open_button">
 				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ionicon"><path d="M80 160h352M80 256h352M80 352h352" fill="none" stroke="" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32px"/></svg>
 			</button>
 			<nav id="mainNav" class="navigation">
-				<button type="button" aria-label="Close Menu" class="icon_button close_button">
+				<button type="button" aria-label="Close Menu" class="icon menu_button close_button">
 					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ionicon"><path d="M368 368 144 144M368 144 144 368" fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="32px"/></svg>
 				</button>
 				<ul class="main_nav">
@@ -34,17 +34,18 @@
 					<li><a href="mailto:info@angelajholden.com" target="_blank">Email</a></li>
 				</ul>
 			</nav>
-			<div class="search_form-container">
-				<button type="button" aria-label="Search Open" aria-expanded="false" aria-controls="searchOverlay" class="icon_button search_button">
-					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ionicon"><path d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64Z" fill="none" stroke="" stroke-miterlimit="10" stroke-width="32px"/><path d="M338.29 338.29 448 448" fill="none" stroke="" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32px"/></svg>
+			<button type="button" aria-label="Search Open" aria-expanded="false" aria-controls="searchOverlay" class="icon open_search search_button">
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ionicon"><path d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64Z" fill="none" stroke="" stroke-miterlimit="10" stroke-width="32px"/><path d="M338.29 338.29 448 448" fill="none" stroke="" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32px"/></svg>
+			</button>
+			<div id="searchOverlay" class="search_form-overlay">
+				<button type="button" aria-label="Close Search" class="icon close_search search_button">
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ionicon"><path d="M368 368 144 144M368 144 144 368" fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="32px"/></svg>
 				</button>
-				<div id="searchOverlay" class="search_form-overlay">
-					<form class="search_form">
-						<label for="search_input">Search</label>
-						<input id="search_input" class="search" name="search" type="search">
-						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ionicon"><path d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64Z" fill="none" stroke="" stroke-miterlimit="10" stroke-width="32px"/><path d="M338.29 338.29 448 448" fill="none" stroke="" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32px"/></svg>
-					</form>
-				</div>
+				<form class="search_form">
+					<label for="search_input">Search</label>
+					<input id="search_input" class="search" name="search" type="search">
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ionicon"><path d="M221.09 64a157.09 157.09 0 1 0 157.09 157.09A157.1 157.1 0 0 0 221.09 64Z" fill="none" stroke="" stroke-miterlimit="10" stroke-width="32px"/><path d="M338.29 338.29 448 448" fill="none" stroke="" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32px"/></svg>
+				</form>
 			</div>
 		</div>
 	</header>
@@ -72,7 +73,7 @@
 					<figure class="figure">
 						<img src="images/blue-banquet-tables.jpg" alt="Round banquet tables illuminated with blue light and candles.">
 					</figure>
-					<div class="category">Event Design</div>
+					<div class="story_category">Event Design</div>
 					<h3 class="blog_heading">Setting the Mood in Blue</h3>
 					<time datetime="2026-08-09">August 9, 2026</time>
 				</article>
@@ -80,7 +81,7 @@
 					<figure class="figure">
 						<img src="images/candlelit-wine-dinner.jpg" alt="Glass of red wine on a candlelit restaurant table.">
 					</figure>
-					<div class="category">Entertaining</div>
+					<div class="story_category">Entertaining</div>
 					<h3 class="blog_heading">The Art of a Candlelit Dinner</h3>
 					<time datetime="2026-08-01">August 1, 2026</time>
 				</article>
@@ -88,7 +89,7 @@
 					<figure class="figure">
 						<img src="images/champagne-reception.jpg" alt="Champagne flutes arranged beside a white floral centerpiece.">
 					</figure>
-					<div class="category">Celebrations</div>
+					<div class="story_category">Celebrations</div>
 					<h3 class="blog_heading">A Better Welcome Drink</h3>
 					<time datetime="2026-07-20">July 20, 2026</time>
 				</article>
@@ -96,7 +97,7 @@
 					<figure class="figure">
 						<img src="images/city-bokeh-table.jpg" alt="Empty wooden tabletop against colorful blurred city lights.">
 					</figure>
-					<div class="category">Venues</div>
+					<div class="story_category">Venues</div>
 					<h3 class="blog_heading">After-Dark Atmosphere</h3>
 					<time datetime="2026-07-07">July 7, 2026</time>
 				</article>
@@ -106,7 +107,7 @@
 			<div class="main_content">
 				<article class="item full_width">
 					<header>
-						<div class="category">Hosting</div>
+						<div class="category"><span>Hosting</span></div>
 						<h2 class="blog_heading">How to Plan a Smooth Cocktail Reception</h2>
 					</header>
 					<figure class="figure">
@@ -167,7 +168,7 @@
 							<img src="images/dim-restaurant-dining.jpg" alt="Warmly lit restaurant tables beneath black pendant lamps.">
 						</figure>
 						<header>
-							<div class="category">Interiors</div>
+							<div class="category"><span>Interiors</span></div>
 							<h2 class="blog_heading">Designing an Intimate Dining Room</h2>
 						</header>
 						<div class="blog_content">
@@ -192,7 +193,7 @@
 							<img src="images/empty-bar-counter.jpg" alt="Empty wooden bar counter beneath rows of glowing lights.">
 						</figure>
 						<header>
-							<div class="category">Entertaining</div>
+							<div class="category"><span>Entertaining</span></div>
 							<h2 class="blog_heading">Why the Bar Becomes the Heart of the Party</h2>
 						</header>
 						<div class="blog_content">
@@ -217,7 +218,7 @@
 							<img src="images/empty-cafe-counter.jpg" alt="Wooden café counter with softly blurred patrons and lights beyond it.">
 						</figure>
 						<header>
-							<div class="category">Ideas</div>
+							<div class="category"><span>Ideas</span></div>
 							<h2 class="blog_heading">Creating a Café-Inspired Gathering</h2>
 						</header>
 						<div class="blog_content">
@@ -242,7 +243,7 @@
 							<img src="images/empty-restaurant-interior.jpg" alt="Sunlit restaurant interior with wooden tables and upholstered chairs.">
 						</figure>
 						<header>
-							<div class="category">Venues</div>
+							<div class="category"><span>Venues</span></div>
 							<h2 class="blog_heading">Choosing a Venue with Natural Character</h2>
 						</header>
 						<div class="blog_content">
@@ -292,7 +293,7 @@
 							<img src="images/floral-chair-decor.jpg" alt="White ceremony chairs decorated with gold bows and bright pink flowers.">
 						</figure>
 						<header>
-							<div class="category">Event Design</div>
+							<div class="category"><span>Event Design</span></div>
 							<h2 class="blog_heading">Small Floral Details with a Big Impact</h2>
 						</header>
 						<div class="blog_content">
@@ -317,7 +318,7 @@
 							<img src="images/garden-dining-table.jpg" alt="Outdoor dining table set with white linens and glassware in a garden.">
 						</figure>
 						<header>
-							<div class="category">Outdoor Living</div>
+							<div class="category"><span>Outdoor Living</span></div>
 							<h2 class="blog_heading">A Relaxed Garden Table for Any Occasion</h2>
 						</header>
 						<div class="blog_content">
