@@ -70,6 +70,10 @@ svg {
 	margin: 0 auto;
 }
 
+.main .wrap {
+	padding: 0 1rem;
+}
+
 .access-hidden {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
@@ -220,6 +224,12 @@ h4 {
 }
 
 /* Story Items */
+.stories {
+	padding: 3rem 0 6rem;
+	margin: 0 1rem 6rem;
+	border-bottom: 2px solid var(--gray);
+}
+
 .secondary_heading {
 	font-size: 2rem;
 	font-weight: 300;
@@ -251,8 +261,12 @@ h4 {
 	display: inline-block;
 	padding: 0.5rem 1rem;
 	margin-left: 50%;
+	margin-bottom: 1rem;
 	transform: translate(-50%, -0.5rem);
 	background-color: var(--white);
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	line-height: 1;
 	color: var(--gold);
 }
@@ -313,4 +327,212 @@ h4 {
 	height: 0;
 	border-bottom: 2px solid var(--gold);
 	z-index: -1;
+}
+
+.main_content .blog_heading {
+	max-width: 25ch;
+	font-size: 1.5rem;
+	margin: 0 auto 2rem;
+}
+
+.main_content .figure {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1.5 / 1;
+}
+
+.main_content img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.main_content p:has(a) {
+	text-align: center;
+}
+
+.main_content a {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: var(--gold);
+	text-decoration-color: var(--gold);
+	transition: text-decoration-color 300ms ease-in-out;
+}
+
+.main_content a:focus,
+.main_content a:hover,
+.main_content a:active {
+	text-decoration-color: transparent;
+}
+
+.main_content .meta {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+	margin: 3rem 0;
+	border-top: 2px dashed var(--gray);
+	border-bottom: 2px dashed var(--gray);
+}
+
+.article_grid .meta {
+	border-bottom: none;
+}
+
+.main_content .left_side {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 0.9rem;
+	font-style: italic;
+	color: var(--dk-gray);
+	line-height: 1;
+}
+
+.main_content .left_side time::after {
+	content: "/";
+	display: inline-block;
+	padding: 0 0.25rem;
+	margin: 0 0.25rem;
+}
+
+.main_content .left_side svg {
+	display: inline-block;
+	vertical-align: middle;
+	width: 0.85rem;
+	height: 0.85rem;
+	stroke: var(--dk-gray);
+	margin-right: 0.25rem;
+}
+
+.main_content .right_side {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 5px;
+}
+
+.main_content .right_side a {
+	display: block;
+	padding: 1rem;
+	border-radius: 5px;
+	background-color: transparent;
+	transition: background-color 300ms ease-in-out;
+}
+
+.main_content .right_side a:focus,
+.main_content .right_side a:hover,
+.main_content .right_side a:active {
+	background-color: var(--teal);
+}
+
+.main_content .right_side svg {
+	width: 1rem;
+	height: 1rem;
+	fill: var(--dk-gray);
+	stroke: var(--dk-gray);
+	transition:
+		fill 300ms ease-in-out,
+		stroke 300ms ease-in-out;
+}
+
+.main_content .right_side a:focus svg,
+.main_content .right_side a:hover svg,
+.main_content .right_side a:active svg {
+	fill: var(--white);
+	stroke: var(--white);
+}
+
+/* Article Grid */
+.article_grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 3rem;
+}
+
+.article_grid .figure {
+	margin: 0 0 2rem;
+}
+
+/* Click to Load Video */
+.video_section {
+	position: relative;
+	padding: 0;
+	margin: 0 0 3rem;
+	z-index: 0;
+}
+
+.video_header {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	background-image: linear-gradient(to top, var(--black), var(--black), transparent);
+}
+
+.video_header .blog_heading {
+	color: var(--white);
+}
+
+.video_header .meta {
+	margin: 0 3rem 1rem;
+	border-top: 1px solid var(--dk-gray);
+	border-bottom: none;
+	justify-content: center;
+}
+
+.video_header .meta .left_side {
+	color: var(--white);
+}
+
+.video_header .meta .left_side svg {
+	stroke: var(--white);
+}
+
+.video_section .yt_video {
+	position: relative;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	z-index: 0;
+}
+
+.yt_video-container {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.play_button {
+	padding: 0.5rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 50%);
+	transition: background-color 300ms ease-in-out;
+}
+
+.play_button:focus,
+.play_button:hover,
+.play_button:active {
+	background-color: var(--white);
+}
+
+.play_button svg {
+	width: 4rem;
+	height: 4rem;
+}
+
+.yt_video-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
