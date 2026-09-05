@@ -115,6 +115,24 @@ h4 {
 	margin: 0 0 1rem;
 }
 
+.secondary_heading {
+	font-size: 2rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+	margin: 0 0 2rem;
+}
+
+.secondary_heading:has(+ p) {
+	margin: 0 0 1rem;
+}
+
+.secondary_heading + p {
+	text-align: center;
+	margin: 1rem 0 2rem;
+}
+
 /* Header */
 .header {
 	padding: 1rem;
@@ -228,15 +246,6 @@ h4 {
 	padding: 3rem 0 6rem;
 	margin: 0 1rem 6rem;
 	border-bottom: 2px solid var(--gray);
-}
-
-.secondary_heading {
-	font-size: 2rem;
-	font-weight: 300;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	text-align: center;
-	margin: 0 0 2rem;
 }
 
 .story_wrap {
@@ -535,4 +544,45 @@ h4 {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+/* Instagram Feed */
+.instagram_section {
+	padding: 0 0.333rem 0.333rem;
+}
+
+.insta_footer-grid {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 0.333rem;
+}
+
+.insta_footer-grid .figure {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1;
+}
+
+.insta_footer-grid img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Footer */
+.bottom_footer {
+	padding: 2rem 1rem;
+	background-color: var(--black);
+	color: var(--white);
+}
+
+.bottom_footer .wrap {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bottom_footer p {
+	margin: 0;
 }
