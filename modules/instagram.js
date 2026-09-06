@@ -12,7 +12,8 @@ export function initInstagram(data) {
 
 			const img = document.createElement("img");
 			img.src = item.media_url;
-			img.alt = "";
+			img.alt = item.alt;
+			img.loading = `lazy`;
 
 			figure.append(img);
 			container.append(figure);

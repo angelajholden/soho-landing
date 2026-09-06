@@ -518,6 +518,29 @@ h4 {
 	z-index: 1;
 }
 
+.yt_thumb {
+	opacity: 1;
+	transition: opacity 1500ms ease-in-out;
+}
+
+.yt_thumb.yt_animate {
+	opacity: 0;
+}
+
+.yt_thumb,
+.yt_iframe {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 3;
+}
+
+.yt_iframe {
+	z-index: 4;
+}
+
 .play_button {
 	padding: 0.5rem;
 	position: absolute;
@@ -527,6 +550,7 @@ h4 {
 	border-radius: 5px;
 	background-color: rgba(255, 255, 255, 50%);
 	transition: background-color 300ms ease-in-out;
+	z-index: 5;
 }
 
 .play_button:focus,
