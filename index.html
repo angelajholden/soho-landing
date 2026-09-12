@@ -342,29 +342,30 @@
 						</footer>
 					</article>
 				</div>
+				<button type="button" class="button">Load More</button>
 			</div>
 			<aside class="sidebar">
 				<section class="sidebar_section">
-					<h3 class="tertiary_heading">About Me</h3>
-					<figure class="figure">
+					<h3 class="tertiary_heading"><span>About Me</span></h3>
+					<figure class="figure about_me">
 						<img loading="lazy" src="images/duck-macarons.jpg" alt="Duck Macarons">
 					</figure>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aperiam architecto reiciendis mollitia.</p>
 				</section>
 				<section class="sidebar_section">
-					<h3 class="tertiary_heading">Newsletter</h3>
-					<form action="" class="form">
+					<h3 class="tertiary_heading"><span>Newsletter</span></h3>
+					<form action="" class="form newsletter">
 						<label class="access-hidden" for="email">Email</label>
-						<input type="email" name="email" id="email" class="text_input">
+						<input type="email" name="email" id="email" class="text_input" placeholder="Your Email Address">
 						<button class="button" type="submit">Subscribe</button>
 					</form>
 				</section>
 				<section class="sidebar_section">
-					<h3 class="tertiary_heading">Instagram</h3>
+					<h3 class="tertiary_heading"><span>Instagram</span></h3>
 					<div class="insta_grid"></div>
 				</section>
 				<section class="sidebar_section">
-					<h3 class="tertiary_heading">Categories</h3>
+					<h3 class="tertiary_heading"><span>Categories</span></h3>
 					<ul class="sidebar_list">
 						<li>Hosting <span>(8)</span></li>
 						<li>Event Design <span>(8)</span></li>
@@ -374,36 +375,48 @@
 					</ul>
 				</section>
 				<section class="sidebar_section">
-					<h3 class="tertiary_heading">Recent Posts</h3>
-					<ul class="sidebar_list">
+					<h3 class="tertiary_heading"><span>Recent Posts</span></h3>
+					<ul class="sidebar_list recent_posts">
 						<li>
 							<figure class="figure">
 								<img loading="lazy" src="images/cocktail-waiter.jpg" alt="Server carrying a tray of drinks through a crowded reception.">
 							</figure>
-							<h4>How to Plan a Smooth Cocktail Reception</h4>
+							<div class="recent_post-meta">
+								<h4>How to Plan a Smooth Cocktail Reception</h4>
+								<time datetime="2026-09-12">Sep 12, 2026</time>
+							</div>
 						</li>
 						<li>
 							<figure class="figure">
 								<img loading="lazy" src="images/dim-restaurant-dining.jpg" alt="Warmly lit restaurant tables beneath black pendant lamps.">
 							</figure>
-							<h4>Designing an Intimate Dining Room</h4>
+							<div class="recent_post-meta">
+								<h4>Designing an Intimate Dining Room</h4>
+								<time datetime="2026-09-12">Sep 12, 2026</time>
+							</div>
 						</li>
 						<li>
 							<figure class="figure">
 								<img loading="lazy" src="images/empty-bar-counter.jpg" alt="Empty wooden bar counter beneath rows of glowing lights.">
 							</figure>
-							<h4>Why the Bar Becomes the Heart of the Party</h4>
+							<div class="recent_post-meta">
+								<h4>Why the Bar Becomes the Heart of the Party</h4>
+								<time datetime="2026-09-12">Sep 12, 2026</time>
+							</div>
 						</li>
 						<li>
 							<figure class="figure">
 								<img loading="lazy" src="images/empty-cafe-counter.jpg" alt="Wooden café counter with softly blurred patrons and lights beyond it.">
 							</figure>
-							<h4>Creating a Café-Inspired Gathering</h4>
+							<div class="recent_post-meta">
+								<h4>Creating a Café-Inspired Gathering</h4>
+								<time datetime="2026-09-12">Sep 12, 2026</time>
+							</div>
 						</li>
 					</ul>
 				</section>
-				<section class="sidebar_section">
-					<h3 class="tertiary_heading">Latest X Posts</h3>
+				<section class="sidebar_section x_posts">
+					<h3 class="tertiary_heading"><span>Latest X Posts</span></h3>
 					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" class="ionicon"><path fill="" d="M9.333 6.929 14.546 1H13.31L8.783 6.147 5.169 1H1l5.466 7.783L1 15h1.235l4.779-5.436L10.83 15H15zM7.641 8.852l-.554-.776L2.68 1.911h1.898l3.557 4.977.552.776 4.623 6.47h-1.897z"/></svg>
 					<div class="x_user">_angelajholden</div>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officiis reprehenderit ratione possimus commodi quisquam!</p>
@@ -412,7 +425,7 @@
 						<li>
 							<span class="access-hidden">Slide One</span>
 						</li>
-						<li>
+						<li class="active_slide">
 							<span class="access-hidden">Slide Two</span>
 						</li>
 						<li>

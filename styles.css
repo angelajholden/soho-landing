@@ -61,6 +61,12 @@ svg {
 	stroke: blue;
 }
 
+time {
+	font-family: "Times New Roman", Times, serif;
+	font-style: italic;
+	color: var(--dk-gray);
+}
+
 .section {
 	padding: 3rem 1rem;
 }
@@ -68,6 +74,10 @@ svg {
 .wrap {
 	max-width: 100rem;
 	margin: 0 auto;
+}
+
+.main {
+	margin: 0 0 10rem;
 }
 
 .main .wrap {
@@ -89,6 +99,28 @@ button {
 	padding: 0;
 	background-color: transparent;
 	cursor: pointer;
+}
+
+.button {
+	display: block;
+	padding: 1rem 1.5rem;
+	margin: 0.5rem auto 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+	color: var(--white);
+	border: 2px solid var(--gold);
+	background-color: var(--gold);
+	transition:
+		background-color 300ms ease-in-out,
+		color 300ms ease-in-out;
+}
+
+.button:focus,
+.button:hover,
+.button:active {
+	color: var(--gold);
+	background-color: var(--white);
 }
 
 a {
@@ -568,6 +600,168 @@ h4 {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+/* Sidebar */
+.sidebar_section {
+	padding: 3rem 0 0;
+}
+
+.sidebar .tertiary_heading {
+	font-size: 1rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.sidebar .tertiary_heading::after {
+	content: "";
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 0;
+	border-bottom: 1px solid var(--gray);
+	transform: translateY(-18px);
+	z-index: -1;
+}
+
+.tertiary_heading span {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	background-color: var(--white);
+}
+
+.sidebar .about_me {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+}
+
+.sidebar .about_me img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.sidebar .about_me + p {
+	text-align: center;
+}
+
+/* Newsletter */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="url"] {
+	width: 100%;
+	padding: 1rem;
+	border: 1px solid var(--dk-gray);
+	background-color: var(--white);
+}
+
+.newsletter .button {
+	width: 100%;
+}
+
+/* Instagram Grid */
+.insta_grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0.333rem;
+}
+
+.insta_grid .figure {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1;
+}
+
+.insta_grid .figure img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.sidebar_list {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.sidebar_list li {
+	padding: 0 0 0.75rem;
+	margin: 0 0 0.75rem;
+	border-bottom: 2px dashed var(--gray);
+}
+
+.sidebar_list li:last-of-type {
+	border-bottom: none;
+}
+
+.sidebar_list li span {
+	color: var(--dk-gray);
+}
+
+/* Recent Posts */
+.recent_posts li {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	gap: 1rem;
+}
+
+.recent_posts .figure {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4 / 3;
+}
+
+.recent_posts .figure img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.recent_posts h4 {
+	font-weight: 500;
+	margin: 0 0 0.5rem;
+}
+
+/* X Post Slider */
+.x_posts {
+	text-align: center;
+}
+
+.x_posts svg {
+	width: 2rem;
+	height: 2rem;
+	margin: 0 auto 1rem;
+	stroke: var(--gold);
+}
+
+.slider_dots {
+	padding: 0;
+	margin: 1rem 0 0;
+	list-style-type: none;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.slider_dots li {
+	display: block;
+	width: 0.75rem;
+	height: 0.75rem;
+	border-radius: 50%;
+	border: 2px solid var(--dk-gray);
+	background-color: transparent;
+}
+
+.slider_dots li.active_slide {
+	border-color: var(--gold);
+	background-color: var(--gold);
 }
 
 /* Instagram Feed */
