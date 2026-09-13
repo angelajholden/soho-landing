@@ -1,8 +1,10 @@
 import { fetchData } from "./modules/data.js";
 import { initInstagram } from "./modules/instagram.js";
 import initClickToLoad from "./modules/click-to-load.js";
+import initNavigation from "./modules/navigation.js";
 
 initClickToLoad();
+initNavigation();
 
 async function init() {
 	const data = await fetchData();

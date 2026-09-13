@@ -179,10 +179,30 @@ h4 {
 }
 
 /* Nav and Search Icons */
+.header .icon {
+	padding: 0.5rem;
+	border-radius: 5px;
+	background-color: transparent;
+	transition: background-color 300ms ease-in-out;
+}
+
+.header .icon:focus,
+.header .icon:hover,
+.header .icon:active {
+	background-color: var(--white);
+}
+
 .header .icon svg {
 	width: 2rem;
 	height: 2rem;
 	stroke: var(--white);
+	transition: stroke 300ms ease-in-out;
+}
+
+.header .icon:focus svg,
+.header .icon:hover svg,
+.header .icon:active svg {
+	stroke: var(--black);
 }
 
 /* Navigation */
@@ -199,13 +219,15 @@ h4 {
 	margin: 0;
 	list-style-type: none;
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: center;
-	gap: 3rem;
+	gap: clamp(1rem, 3vw, 3rem);
 }
 
 .main_nav a {
+	display: block;
+	padding: 0;
 	text-decoration-color: transparent;
 	text-underline-offset: 5px;
 	text-transform: uppercase;
@@ -218,6 +240,101 @@ h4 {
 .main_nav a:hover,
 .main_nav a:active {
 	text-decoration-color: var(--white);
+}
+
+@media (max-width: 1024px) {
+	.header {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		padding: 0.25rem;
+		z-index: 1;
+	}
+
+	.header .wrap {
+		justify-content: center;
+	}
+
+	.open_button,
+	.open_search {
+		display: none;
+	}
+
+	.main_nav {
+		justify-content: center;
+		gap: 0;
+	}
+
+	.main_nav a {
+		padding: 0.7rem;
+	}
+
+	.js .header {
+		padding: 1rem;
+	}
+
+	.js .header .wrap {
+		justify-content: space-between;
+	}
+
+	.js .navigation {
+		visibility: hidden;
+		position: fixed;
+		top: 0;
+		left: -300px;
+		transform: translateX(0);
+		width: 300px;
+		height: 100dvh;
+		z-index: 1;
+		background-color: var(--black);
+		transition:
+			transform 300ms ease-in-out,
+			visibility 300ms ease-in-out;
+	}
+
+	.js .open_button,
+	.js .open_search {
+		display: block;
+		visibility: visible;
+	}
+
+	.js .close_button {
+		display: block;
+		visibility: hidden;
+		margin: 0.5rem;
+		margin-left: auto;
+	}
+
+	.js .main_nav {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.js .main_nav li {
+		display: block;
+		width: 100%;
+		border-bottom: 2px dashed var(--dk-gray);
+	}
+
+	.js .main_nav li:last-of-type {
+		border-bottom: none;
+	}
+
+	.js .menu_active .navigation {
+		visibility: visible;
+		opacity: 1;
+		transform: translateX(300px);
+	}
+
+	.js .menu_active .open_button {
+		visibility: hidden;
+	}
+
+	.js .menu_active .close_button {
+		visibility: visible;
+		display: block;
+	}
 }
 
 /* Search */
