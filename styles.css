@@ -343,10 +343,51 @@ h4 {
 	visibility: hidden;
 	position: fixed;
 	inset: 0;
+	padding: 1rem;
 	width: 100%;
 	height: 100%;
 	z-index: -1;
 	pointer-events: none;
+	background-color: var(--black);
+	transition:
+		opacity 300ms ease-in-out,
+		visibility 300ms ease-in-out;
+}
+
+.search_active .search_form-overlay {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+	z-index: 1;
+}
+
+.search_active .open_search {
+	visibility: hidden;
+}
+
+.close_search {
+	display: block;
+	margin-left: auto;
+}
+
+.search_form {
+	position: relative;
+	max-width: 50rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.search_form input {
+	width: 100%;
+	padding: 1.5rem;
+}
+
+.search_form svg {
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+	transform: translateY(-50%);
+	stroke: var(--dk-gray);
 }
 
 /* Hero Section */
