@@ -31,6 +31,7 @@ html {
 }
 
 body {
+	position: relative;
 	padding: 0;
 	margin: 0;
 	font-family: "Montserrat", sans-serif;
@@ -244,7 +245,7 @@ h4 {
 
 @media (max-width: 1024px) {
 	.header {
-		position: fixed;
+		position: sticky;
 		width: 100%;
 		top: 0;
 		left: 0;
@@ -271,7 +272,7 @@ h4 {
 	}
 
 	.js .header {
-		padding: 1rem;
+		padding: 0.25rem;
 	}
 
 	.js .header .wrap {
@@ -408,13 +409,15 @@ h4 {
 }
 
 .hero_title {
-	font-size: 5rem;
+	font-size: clamp(2rem, 6vw, 5rem);
 	font-weight: 300;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	color: var(--white);
+	padding: 1rem;
 	margin: 0;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 50%);
+	background-color: rgba(0, 0, 0, 50%);
 }
 
 .hero_section .figure {
@@ -429,6 +432,12 @@ h4 {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+@media (max-width: 600px) {
+	.hero_section {
+		aspect-ratio: 16 / 9;
+	}
 }
 
 /* Story Items */
@@ -458,6 +467,7 @@ h4 {
 
 .story_category {
 	display: inline-block;
+	white-space: nowrap;
 	padding: 0.5rem 1rem;
 	margin-left: 50%;
 	margin-bottom: 1rem;
@@ -485,6 +495,22 @@ h4 {
 	font-style: italic;
 	text-align: center;
 	color: var(--dk-gray);
+}
+
+@media (max-width: 1024px) {
+	.stories {
+		padding: 2rem 0;
+		margin: 0 1rem 2rem;
+	}
+
+	.story_wrap {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	.story .figure {
+		aspect-ratio: 16 / 9;
+	}
 }
 
 /* Main Content */
@@ -645,6 +671,26 @@ h4 {
 	stroke: var(--white);
 }
 
+@media (max-width: 960px) {
+	.main .wrap {
+		grid-template-columns: 1fr;
+	}
+
+	.main_content {
+		padding-right: 0;
+		margin-right: 0;
+		border-right: none;
+	}
+
+	.main_content .meta {
+		flex-direction: column;
+		justify-content: center;
+		gap: 1rem;
+		padding: 1rem 0 0.25rem;
+		margin: 1rem 0;
+	}
+}
+
 /* Article Grid */
 .article_grid {
 	display: grid;
@@ -654,6 +700,18 @@ h4 {
 
 .article_grid .figure {
 	margin: 0 0 2rem;
+}
+
+@media (max-width: 768px) {
+	.article_grid {
+		gap: 1rem;
+	}
+}
+
+@media (max-width: 500px) {
+	.article_grid {
+		grid-template-columns: 1fr;
+	}
 }
 
 /* Click to Load Video */
