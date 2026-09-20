@@ -283,9 +283,9 @@ h4 {
 		visibility: hidden;
 		position: fixed;
 		top: 0;
-		left: -300px;
-		transform: translateX(0);
-		width: 300px;
+		left: 0;
+		transform: translateX(-100%);
+		width: min(300px, 100%);
 		height: 100dvh;
 		z-index: 1;
 		background-color: var(--black);
@@ -325,7 +325,7 @@ h4 {
 	.js .menu_active .navigation {
 		visibility: visible;
 		opacity: 1;
-		transform: translateX(300px);
+		transform: translateX(0);
 	}
 
 	.js .menu_active .open_button {
@@ -548,6 +548,7 @@ h4 {
 	transform: translateY(-1rem);
 	display: block;
 	width: 200px;
+	max-width: 100%;
 	margin: 0 auto;
 	height: 0;
 	border-bottom: 2px solid var(--gold);
@@ -818,6 +819,12 @@ h4 {
 	object-fit: cover;
 }
 
+@media (max-width: 768px) {
+	.video_header .meta {
+		margin: 0 1rem 1rem;
+	}
+}
+
 /* Sidebar */
 .sidebar_section {
 	padding: 3rem 0 0;
@@ -1003,6 +1010,13 @@ input[type="url"] {
 	object-fit: cover;
 }
 
+@media (max-width: 768px) {
+	.insta_footer-grid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.333rem;
+	}
+}
+
 /* Footer */
 .bottom_footer {
 	padding: 2rem 1rem;
@@ -1019,4 +1033,11 @@ input[type="url"] {
 
 .bottom_footer p {
 	margin: 0;
+}
+
+@media (max-width: 768px) {
+	.bottom_footer .wrap {
+		flex-direction: column;
+		justify-content: center;
+	}
 }
