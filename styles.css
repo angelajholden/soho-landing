@@ -78,7 +78,7 @@ time {
 }
 
 .main {
-	margin: 0 0 10rem;
+	margin: 0 0 clamp(3rem, 8vw, 10rem);
 }
 
 .main .wrap {
