@@ -674,7 +674,7 @@ h4 {
 
 @media (max-width: 960px) {
 	.main .wrap {
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 1fr);
 	}
 
 	.main_content {
@@ -743,7 +743,7 @@ h4 {
 	justify-content: center;
 }
 
-.video_header .meta .left_side {
+.video_header .meta .left_side span {
 	color: var(--white);
 }
 
@@ -819,9 +819,32 @@ h4 {
 	object-fit: cover;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
+	.video_section {
+		margin: 2rem 0;
+	}
+
+	.video_header {
+		position: static;
+		color: var(--black);
+		background: transparent;
+	}
+
+	.video_header .blog_heading {
+		color: var(--black);
+		margin: 0 auto 1rem;
+	}
+
 	.video_header .meta {
 		margin: 0 1rem 1rem;
+	}
+
+	.video_header .meta .left_side span {
+		color: var(--dk-gray);
+	}
+
+	.video_header .meta .left_side svg {
+		stroke: var(--dk-gray);
 	}
 }
 
@@ -930,6 +953,7 @@ input[type="url"] {
 .recent_posts li {
 	display: grid;
 	grid-template-columns: 1fr 3fr;
+	align-items: start;
 	gap: 1rem;
 }
 
@@ -1036,6 +1060,10 @@ input[type="url"] {
 }
 
 @media (max-width: 768px) {
+	.bottom_footer {
+		text-align: center;
+	}
+
 	.bottom_footer .wrap {
 		flex-direction: column;
 		justify-content: center;
